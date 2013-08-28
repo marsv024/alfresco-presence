@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<model name="pres:presenceModel" xmlns="http://www.alfresco.org/model/dictionary/1.0">
+
+   <!-- Meta-data about the model -->
+   <description>Presence - Alfresco Presence model</description>
+   <author>Rasmus Melgaard</author>
+   <version>0.1</version>
+
+   <!-- Imports are required to allow references to definitions in other models -->
+   <imports>
+      <!-- Import Alfresco Dictionary Definitions -->
+      <import uri="http://www.alfresco.org/model/dictionary/1.0" prefix="d"/>
+      <!-- Import Alfresco Content Domain Model Definitions -->
+      <import uri="http://www.alfresco.org/model/content/1.0" prefix="cm"/>
+      <!-- Import Alfresco Forum Model Definitions -->
+      <import uri="http://www.alfresco.org/model/forum/1.0" prefix="fm"/>
+      <!-- Import Alfresco Content Domain Model Definitions -->
+      <import uri="http://www.alfresco.org/model/system/1.0" prefix="sys" />
+   </imports>
+   
+   <namespaces>
+      <namespace uri="http://www.redpill-linpro.com/model/presence/1.0" prefix="pres"/>
+   </namespaces>
+
+   <aspects>
+      <!-- User presence  -->
+      <aspect name="pres:userPresence">
+         <title>user Presence</title>
+         <description>User Presence updated from web via post webscript</description>
+         <properties>
+            <property name="pres:status">
+               <title>Current status</title>
+               <type>d:text</type>
+               <mandatory>false</mandatory>
+            </property>
+            <property name="pres:lastStatus">
+               <title>Last status</title>
+               <type>d:text</type>
+               <mandatory>false</mandatory>
+            </property>
+            <property name="pres:updateTime">
+               <title>Update time</title>
+               <type>d:datetime</type>
+               <mandatory>false</mandatory>
+            </property>
+         </properties>
+      </aspect>
+  </aspects>
+</model>

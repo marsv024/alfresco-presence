@@ -1,0 +1,10 @@
+<webscript>
+  <shortname>presence update</shortname>
+  <description>Presence update - update current users presence via post webscript</description>
+  <url>/presence/statuses</url>
+  <family>presence</family>
+  <format default="json">argument</format>
+  <authentication runas="admin">user</authentication>
+  <transaction allow="readonly" buffersize="0">required</transaction>
+  <lifecycle>internal</lifecycle>
+</webscript>
